@@ -109,13 +109,13 @@ Install the dependencies. On Debian/Ubuntu this means:
 
 On Mac OS X with homebrew:
 
-`brew install opencv boost`
+`brew install opencv boost automake`
 
-Then compile:
+Then compile (your configure flags may vary):
 
 ```
 autoreconf --verbose --install --symlink
-./configure
+./configure CXXFLAGS="-I/usr/local/include/opencv4 -std=gnu++11"
 make
 ```
 
